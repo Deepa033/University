@@ -7,6 +7,19 @@
 		<link rel="stylesheet" href="assets/css/main.css"/>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css"/></noscript>
 		<link rel="icon" href="images/HS Gour logo.jpg">
+		<script type="text/javascript">
+			function validate()
+			{
+				var username=document.getElementById("uname").value;
+				var regx=/E00/;
+				if (regx.test(username)) {
+					alert("valid username");
+				}
+				else{
+					alert("Invalid username");
+					document.getElementById("lbluser").style.visibility="visible";				}
+			}
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -104,19 +117,18 @@
 										
 										<div class="field half">
 											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field half">
+											<input type="text" placeholder="Email" name="email" id="email" /><br>
 											<label for="Password">Password</label>
-											<input type="Password" name="Password" id="Password" />
-										</div><br><br>
+											<input type="Password" placeholder="Password" name="Password" id="Password" /><br>
 										<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="submit" value="Sing in" class="primary" /></li>
 										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<a href="http://dhsgsu.ac.in/noticedetails/3830">Click here to download PDF</a>
-									<a href="#contact">Contact Us</a>
+										</ul>
+										<a href="http://dhsgsu.ac.in/noticedetails/3830">Click here to download PDF</a><br>
+										<a href="#contact">Contact Us</a>
+										</div>
+										</form>
+								
 							</article>       
 							<article id="contact">
 								<h2 class="major">Contact Us</h2>
@@ -133,15 +145,15 @@
 									<div class="fields">
 										<div class="field half">
 											<label for="fname">First Name</label>
-											<input type="text" name="fname" id="fname" />
+											<input type="text" name="fname" id="fname" placeholder="First Name" />
 										</div>
 										<div class="field half">
 											<label for="lname">Last Name</label>
-											<input type="text" name="lname" id="lname" />
+											<input type="text" name="lname" id="lname" placeholder="Last Name" />
 										</div>
 											<div class="field">
 											<label for="message">Message</label><span class="far fa-comment"></span>
-											<textarea name="message" id="message" rows="4"></textarea>
+											<textarea name="message" id="message" placeholder="Type text here" rows="4"></textarea>
 										</div>
 									</div>
 									<ul class="actions">
